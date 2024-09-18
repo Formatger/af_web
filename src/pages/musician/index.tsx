@@ -1,42 +1,27 @@
-import { useRouter } from "next/router";
+import React, { useRef } from 'react';
+import Toolbar from '@/components/toolbar';
+import MainPage from '@/components/musician/mainPage';
 
-
-
-
-
-
-const HomePage = () => {
-
-    const router = useRouter();
-
-    const jobSelection = (path: string) => {
-        router.push(path);
-    }
-
+function MusicianPage() {
+    const sections = {
+        homeRef: useRef(null),
+        aboutMeRef: useRef(null),
+        serviceRef: useRef(null),
+        mediaRef: useRef(null),
+        contactRef: useRef(null),
+    };
 
     return (
-        <div className="home-page">
-            <div className="home-container">
-                aaaaaaaaaaaaaa
-                <button className="button">
-
-                </button>
+        <div>
+            <Toolbar sections={sections} />
+            <div ref={sections.homeRef}>
+                <MainPage />
             </div>
-            <div className="home-container">
-                aaaaaaaaaaaaaaaaa
-                <button
-                    className="button"
-                    onClick={() => jobSelection("/musician")}>
-                </button>
-            </div>
-            <div className="home-container">
-                Maaaaaaaaaaaa
-                <button className="button">
+            <div>
 
-                </button>
             </div>
         </div>
     );
-};
+}
 
-export default HomePage;
+export default MusicianPage;

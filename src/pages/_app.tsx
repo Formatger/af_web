@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import "@/styles/home.css";
-
+import "@/styles/toolbar.css";
+import "@/styles/mainPage.css";
 
 
 import { AppProps } from 'next/app';
