@@ -21,7 +21,7 @@ function MainPage() {
         }
     }, []);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const screenSize = window.matchMedia("(max-width: 768px)");
 
         setIsMobile(screenSize.matches)
