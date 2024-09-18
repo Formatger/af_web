@@ -1,7 +1,148 @@
 :root {
+  /* Text Sizes */
+
+  --text-10: 0.625;
+  --line-10: 1rem;
+  --text-11: 0.6875;
+  --line-11: 1rem;
+  --text-12: 0.75rem;
+  --line-12: 1rem;
+  --text-13: 0.8125;
+  --line-13: 1.25rem;
+  --text-14: 0.875rem;
+  --line-14: 1.25rem;
+  --text-16: 1rem;
+  --line-16: 1.5rem;
+  --text-18: 1.125rem;
+  --line-18: 1.75rem;
+  --text-20: 1.25rem;
+  --line-20: 1.75rem;
+  --text-24: 1.5rem;
+  --line-24: 2rem;
+  --text-32: 2rem;
+  --line-32: 2.25rem;
+  --text-36: 2.25rem;
+  --line-36: 2.5rem;
+  --text-48: 3rem;
+  --line-48: 3.75rem;
+
+  /* Border Radius */
+
+  --r1: 4px;
+  --r2: 6px;
+  --r3: 8px;
+  --r4: 10px;
+  --r5: 16px;
+  --r6: 22px;
+  --r7: 30px;
+  --r8: 40px;
+  --r9: 60px;
+  --r10: 20px;
+  --round: 50%;
+
+  /* Margins & Paddings */
+
+  --m0: 2px;
+  --m1: 4px;
+  --m2: 8px;
+  --m3: 12px;
+  --m4: 16px;
+  --m5: 20px;
+  --m6: 24px;
+  --m7: 32px;
+  --m8: 40px;
+  --m9: 48px;
+  --m10: 64px;
+  --m11: 80px;
+  --m12: 96px;
+  --m13: 128px;
+  --m14: 160px;
+  --m15: 192px;
+  --m16: 224px;
+
+  /* Custom Sizes */
+
+  --toolbar-h: 80px;
+  --sidebar-w: 260px;
+  --btn-h: 40px;
+  --padding: var(--m6);
+
+  --top-radius: var(--r5) var(--r5) 0 0;
+  --bottom-radius: 0 0 var(--r5) var(--r5);
+  --box-pad: var(--m4);
+
+  /* Colors */
+
+  --transparent: transparent;
+  --white: white;
+  --black: black;
+  --dark: var(--gray7) --darkred: #C71026;
+  --red: #ff5b4d;
+  --salmon: #ff8e84;
+  --firebrick: #CD1D05;
+  --pink: #ffccba;
+  --cream: #E2C8C5;
+  --peach: #ffa584;
+
+  --brown2: #ee5f00;
+  --brown: #bd5e00;
+  --dark-hover-orange: #d06901;
+  --dark-orange: #e97505;
+  --orange: #ff8e31;
+  --light-orange: #ffd2a2;
+  --light-orange2: #FFE4C9;
+  --soft-orange: #FFF7ED;
+
+  --yellow: #ffcd58;
+  --soft-yellow: #ffe187;
+
+  --dark-linen: #797470;
+  --linen: #f2e9df;
+  --soft-linen: #FFFDF9;
+
+  --ivory: #f2f2cf;
+  --darkgreen: #0B8A00;
+  --green: #cff2cf;
+  --blue: #cfe6ff;
+  --light-blue: #e7ecf4;
+  --light-steel-blue: #A3AED0;
+
+  --stone: #DEDEDE;
+  --light-stone: #F6F6F6;
+
+  --gray: #f9fafa;
+  --gray1: hsl(215, 10%, 96%);
+  --gray2: hsl(215, 10%, 92%);
+  --gray3: hsl(215, 10%, 84%);
+  --gray4: hsl(215, 10%, 60%);
+  --gray5: #737d8c;
+  --gray6: #505862;
+  --gray7: #25282d;
+  --gray8: hsl(215, 10%, 13%);
+  --gray9: hsl(215, 10%, 11%);
+
+  --overlay: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3));
+
+  /* Shadow */
+
+  --sh-i: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --sh-s: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --sh-m: 4px 4px 6px 0px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --sh-l: 0 10px 10px -5px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --sh-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --sh-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  --sh-box: 5px 5px 5px 0px rgba(0, 0, 0, 0.03);
+  --sh-left: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
   --background: #ffffff;
   --foreground: #171717;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -39,4 +180,16 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+/* GLOBAL CSS STYLES */
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
 }
