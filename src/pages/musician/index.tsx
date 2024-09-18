@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Toolbar from '@/components/toolbar';
 import MainPage from '@/components/musician/mainPage';
+import AboutPage from '@/components/musician/aboutPage';
 
 function MusicianPage() {
     const sections = {
@@ -18,7 +19,7 @@ function MusicianPage() {
                 <MainPage />
             </div>
             <div>
-
+                <AboutPage />
             </div>
         </div>
     );

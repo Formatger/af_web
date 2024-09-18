@@ -185,6 +185,21 @@ a {
 
 /* GLOBAL CSS STYLES */
 
+
+
+
+/* TITLES */
+
+.h1 {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Urbanist-Black';
+  display: flex;
+  font-size: 3vw;
+  padding-left: 2vw;
+  padding-top: 2vw;
+}
+
+
 .button {
   display: flex;
   flex-direction: row;
