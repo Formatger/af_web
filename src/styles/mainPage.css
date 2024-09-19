@@ -19,7 +19,7 @@
     height: 100vh;
     justify-content: center;
     overflow: hidden;
-    
+
 }
 
 .video-background {
@@ -38,11 +38,13 @@
     height: auto;
     position: absolute;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.8) 85%,
+            rgba(0, 0, 0, 1) 97%);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 0;
 }
 
 .First_sentence {

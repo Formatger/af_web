@@ -190,13 +190,10 @@ a {
 
 /* TITLES */
 
-.h1 {
-  background-color: rgb(255, 255, 255);
+h1 {
   font-family: 'Urbanist-Black';
-  display: flex;
   font-size: 3vw;
-  padding-left: 2vw;
-  padding-top: 2vw;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -207,4 +204,17 @@ a {
   align-items: center;
   width: 5rem;
   height: 5rem;
+}
+
+
+
+/* PARAGRAPFHS */
+
+p {
+  width: 100%;
+  height: auto;
+  font-family: 'Montserrat-Regular';
+  font-size: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  line-height: 1.5;
 }
