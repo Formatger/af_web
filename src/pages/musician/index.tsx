@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Toolbar from '@/components/toolbar';
 import MainPage from '@/components/musician/mainPage';
 import AboutPage from '@/components/musician/aboutPage';
+import ServicePage from '@/components/musician/servicePage';
 
 function MusicianPage() {
     const sections = {
@@ -21,6 +22,7 @@ function MusicianPage() {
             <div>
                 <AboutPage />
             </div>
+            <ServicePage />
         </div>
     );
 }
