@@ -129,6 +129,11 @@
 
   /* Shadow */
 
+  --ts-i: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+  --ts-s: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+  --ts-s-white: 1px 1px 4px rgba(255, 255, 255, 0.63);
+
   --sh-i: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   --sh-s: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --sh-m: 4px 4px 6px 0px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -193,14 +198,20 @@ a {
 h1 {
   font-family: 'Urbanist-Black';
   font-size: 3vw;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: var(--ts-s);
 }
 
-.h2 {
-  font-family: 'Urbanist-Bold';
+.h1-white {
+  font-family: 'Urbanist-Black';
+  font-size: 3vw;
+  color: var(--white);
+  text-shadow: var(--ts-s-white);
+}
+
+h2 {
+  font-family: 'Urbanist-Black';
   font-size: 2.2vw;
-  display: flex;
-  padding-top: 2vw;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 
