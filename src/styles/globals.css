@@ -197,13 +197,13 @@ a {
 
 h1 {
   font-family: 'Urbanist-Black';
-  font-size: 3vw;
+  font-size: 50px;
   text-shadow: var(--ts-s);
 }
 
 .h1-white {
   font-family: 'Urbanist-Black';
-  font-size: 3vw;
+  font-size: 50px;
   color: var(--white);
   text-shadow: var(--ts-s-white);
 }

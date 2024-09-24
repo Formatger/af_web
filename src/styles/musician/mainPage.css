@@ -34,8 +34,7 @@
 
 .First_sentence_block {
     width: 100%;
-    min-height: 9vw;
-    height: auto;
+    height: 151px;
     position: absolute;
     bottom: 0;
     background: linear-gradient(to bottom,
@@ -55,7 +54,7 @@
     margin: 5px;
     color: white;
     font-family: 'Urbanist-semibold';
-    font-size: 1.7vw;
+    font-size: 29px;
     letter-spacing: 3.5px;
 }
 

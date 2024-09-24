@@ -3,6 +3,7 @@ import Toolbar from '@/components/toolbar';
 import MainPage from '@/components/musician/mainPage';
 import AboutPage from '@/components/musician/aboutPage';
 import ServicePage from '@/components/musician/servicePage';
+import Media from '@/components/musician/media';
 
 function MusicianPage() {
     const sections = {
@@ -22,7 +23,12 @@ function MusicianPage() {
             <div>
                 <AboutPage />
             </div>
-            <ServicePage />
+            <div>
+                <ServicePage />
+            </div>
+            <div>
+                <Media />
+            </div>
         </div>
     );
 }
