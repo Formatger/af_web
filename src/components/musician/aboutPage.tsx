@@ -3,17 +3,7 @@ import { useState } from 'react';
 import MediaIcon from '@/components/musician/mediaIcon';
 
 function AboutPage() {
-    const abrirCorreo = () => {
-        window.location.href = "mailto:albert_furma@hotmail.com";
-    };
 
-    const abrirInstagram = () => {
-        window.open("https://www.instagram.com/albertformatger/", "_blank");
-    };
-
-    const abrirYouTube = () => {
-        window.open("https://www.youtube.com/@AlbertFormatger", "_blank");
-    };
 
     const [showIcons, setShowIcons] = useState(false);
 
@@ -27,8 +17,8 @@ function AboutPage() {
                     fill="white"
                     className="svgIcon"
                     viewBox="0 0 448 512"
-                    width="100%"
-                    height="100%"
+                    width="85%"
+                    height="85%"
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <path
@@ -36,7 +26,7 @@ function AboutPage() {
                     ></path>
                 </svg>
             ),
-            action: () => abrirInstagram(),
+            action: () => window.open("https://www.instagram.com/albertformatger/", "_blank"),
         },
         {
             name: "YouTube",
@@ -54,7 +44,7 @@ function AboutPage() {
                     <path d="M20.2838235,29.7208546 L20.2817697,19.3775851 L30.0092421,24.5671906 L20.2838235,29.7208546 Z M41.6409276,17.5856462 C41.6409276,17.5856462 41.2890436,15.0488633 40.2097727,13.9319394 C38.8405739,12.4655276 37.3060444,12.4583393 36.6026186,12.3724221 C31.5649942,12 24.008044,12 24.008044,12 L23.9922983,12 C23.9922983,12 16.4356904,12 11.398066,12.3724221 C10.6939556,12.4583393 9.16045298,12.4655276 7.79091194,13.9319394 C6.71164104,15.0488633 6.36009927,17.5856462 6.36009927,17.5856462 C6.36009927,17.5856462 6,20.5646804 6,23.5437145 L6,26.3365376 C6,29.3152295 6.36009927,32.2946059 6.36009927,32.2946059 C6.36009927,32.2946059 6.71164104,34.8310466 7.79091194,35.9483127 C9.16045298,37.4147246 10.9592378,37.3681718 11.7605614,37.5218644 C14.6406709,37.8042616 24.0001711,37.8915481 24.0001711,37.8915481 C24.0001711,37.8915481 31.5649942,37.8799099 36.6026186,37.5074878 C37.3060444,37.4219129 38.8405739,37.4147246 40.2097727,35.9483127 C41.2890436,34.8310466 41.6409276,32.2946059 41.6409276,32.2946059 C41.6409276,32.2946059 42,29.3152295 42,26.3365376 L42,23.5437145 C42,20.5646804 41.6409276,17.5856462 41.6409276,17.5856462 L41.6409276,17.5856462 Z" />
                 </svg>
             ),
-            action: () => abrirYouTube(),
+            action: () => window.open("https://www.youtube.com/@AlbertFormatger", "_blank"),
         },
         {
             name: "E-Mail",
@@ -72,7 +62,21 @@ function AboutPage() {
                     <path d="M2 12h60l-30 24L2 12zm0 4l30 24 30-24v36H2V16z" />
                 </svg>
             ),
-            action: () => abrirCorreo(),
+            action: () => window.location.href = "mailto:albert_furma@hotmail.com",
+        },
+
+        {
+            name: "SoundBetter",
+            username: "Albert Formatger",
+            followers: "SoundBetter Profile",
+            icon: (
+                <img
+                    alt="Albert Formatger, Electric Guitar on SoundBetter"
+                    src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg"
+                    style={{ maxWidth: "130px" }}
+                />
+            ),
+            action: () => window.open("https://soundbetter.com/profiles/622461-albert-formatger", "_blank"),
         }
 
     ];

@@ -29,7 +29,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, list }) => {
                 </ul>
             </div>
         </div >
-        // <div className="imagen-fondo-2"></div>
     );
 };
 

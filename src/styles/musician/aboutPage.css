@@ -223,8 +223,8 @@
 }
 
 .layer {
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     transition: transform 0.3s;
 }
 
@@ -238,19 +238,20 @@
     left: 0;
     height: 100%;
     width: 100%;
-    border: 1px solid #fff;
+    border: 1px transparent;
     border-radius: 15px;
     transition: all 0.3s;
 }
 
+
 .layer span,
 .text {
-    color: #e6683c;
-    border-color: #e6683c;
+    /* color: #e6683c;
+    border-color: #e6683c; */
 }
 
-.icon:hover.layer span {
-    box-shadow: -1px 1px 3px #e6683c;
+.icon:hover .layer span {
+    box-shadow: -1px 1px 5px #fbff008e;
 }
 
 .icon .text {
@@ -269,27 +270,37 @@
 }
 
 .icon:hover .layer span:nth-child(1) {
-    opacity: 0.2;
+    opacity: 0.4;
+    color: #e6683c;
+    border-color: #e6683c;
 }
 
 .icon:hover .layer span:nth-child(2) {
-    opacity: 0.4;
+    opacity: 0.8;
     transform: translate(5px, -5px);
+    color: #e6683c;
+    border-color: #e6683c;
 }
 
 .icon:hover .layer span:nth-child(3) {
-    opacity: 0.6;
+    opacity: 0.9;
     transform: translate(10px, -10px);
+    color: #e6683c;
+    border-color: #e6683c;
 }
 
 .icon:hover .layer span:nth-child(4) {
-    opacity: 0.8;
+    opacity: 1;
     transform: translate(15px, -15px);
+    color: #e6683c;
+    border-color: #e6683c;
 }
 
 .icon:hover .layer span:nth-child(5) {
     opacity: 1;
     transform: translate(20px, -20px);
+    color: #e6683c;
+    border-color: #e6683c;
 }
 
 .instagramSVG {
@@ -349,6 +360,24 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0072C6', endColorstr='#002B5C', GradientType=1);
 }
 
+.soundbetterSVG {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(45deg,
+            #5B2C6F 0%,
+            #7D3C98 25%,
+            #A569BD 50%,
+            #D2B4DE 75%,
+            #F4D03F 100%);
+    background: linear-gradient(45deg,
+            #5B2C6F 0%,
+            #7D3C98 25%,
+            #A569BD 50%,
+            #D2B4DE 75%,
+            #F4D03F 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5B2C6F', endColorstr='#F4D03F', GradientType=1);
+}
 
 .user {
     display: flex;

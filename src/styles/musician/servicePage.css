@@ -25,6 +25,18 @@
     flex-direction: column;
     border-radius: 35px;
     overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.5),
+        0 0 0 30px rgba(255, 255, 255, 0.233),
+        0 10px 20px 33px rgba(0, 0, 0, 0.5),
+        0 0 10px 33px rgba(255, 255, 255, 0.433);
 }
 
 .card-image {
