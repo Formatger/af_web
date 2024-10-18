@@ -1,32 +1,44 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
 import Image from 'next/image';
-import 'swiper/swiper-bundle.css'; // Asegúrate de importar los estilos de Swiper
 
 interface CarouselProps {
-    images: string[];
+    images: string[]; // Array de URLs de imágenes
 }
 
 const Carousel: React.FC<CarouselProps> = ({ images }) => {
-    console.log(images); // Asegúrate de que se estén pasando las rutas correctas
+    console.log(images); // Verificar si las imágenes son accesibles
 
     return (
         <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
             navigation
-            pagination={{ clickable: true }}
-        // Elimina la propiedad autoplay para hacerlo estático
+            modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+            spaceBetween={20}
+            slidesPerView={3}
+            loop={true}
+            autoplay={{
+                delay: 3000,
+            }}
+            grabCursor={true}
+            centeredSlides={true}
+            effect="coverflow"
+            coverflowEffect={{
+                depth: 250,
+                rotate: 0,
+                stretch: 20,
+                modifier: 3.5,
+                slideShadows: false,
+            }}
         >
             {images.map((image, index) => (
                 <SwiperSlide key={index}>
-                    <div className='fotos-container' style={{ position: 'relative', width: '100%', height: '400px' }}>
-                        <Image
-                            src={image} // Asegúrate de que esta sea la ruta correcta
-                            alt={`Image ${index + 1}`} // Proporciona un texto alternativo para accesibilidad
-                            layout="fill" // Ajusta la imagen al tamaño del contenedor
-                            objectFit='cover' // Esto asegura que la imagen cubra el contenedor
-                        />
-                    </div>
+                    <Image
+                        src={image} // URL de la imagen
+                        alt=''
+                        layout="fill"
+                        objectFit="contain" // Ajustar la imagen para cubrir el contenedor
+
+                    />
                 </SwiperSlide>
             ))}
         </Swiper>
@@ -34,46 +46,3 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 };
 
 export default Carousel;
-
-// import React from "react";
-// import Flickity from "react-flickity-component";
-
-// function Carousel({ images }) {
-
-//     const flickityOptions = {
-//         initialIndex: 3,
-//         wrapAround: true,
-//         selectedAttraction: 0.01,
-//         autoPlay: true,
-//         prevNextButtons: true,
-//         pageDots: false,
-//         pauseAutoPlayOnHover: false,
-//         lazyLoad: 5,
-//         fullscreen: true,
-//         arrowShape: {
-//             x0: 30,
-//             x1: 65, y1: 35,
-//             x2: 65, y2: 35,
-//             x3: 55
-//         }
-
-
-//     }
-//     return (
-//         <div className="fotos-container">
-//             <div className='Title-media'>LIVE MEDIA</div>
-//             <div className="carousel-container">
-//                 <Flickity
-//                     className={'fotos'}
-//                     options={flickityOptions}
-//                 >
-//                     {images.map((image, index) => (
-//                         <img src={image} alt="" />
-//                     ))}
-//                 </Flickity>
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default Carousel;

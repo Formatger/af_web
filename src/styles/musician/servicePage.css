@@ -6,7 +6,6 @@
     background: linear-gradient(rgb(5, 0, 8), rgb(21, 2, 31));
     gap: 90px;
     padding: 50px 100px 0px 100px;
-    border-radius: 35px;
 }
 
 .container-card {
@@ -18,6 +17,7 @@
 }
 
 .card {
+    border-radius: 35px 35px 0 0;
     width: 400px;
     min-width: 400px;
     height: auto;
@@ -25,9 +25,10 @@
     flex-direction: column;
     border-radius: 35px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     position: relative;
     box-shadow: none;
+    border-radius: 35px 35px 35px 35px;
 }
 
 .card:hover {

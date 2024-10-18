@@ -6,8 +6,7 @@ import "@/styles/musician/aboutPage.css";
 import "@/styles/musician/servicePage.css";
 import "@/styles/musician/media.css";
 import "@/styles/fonts.css";
-
-import 'swiper/swiper-bundle.css'; // Para importar todos los estilos
+import 'swiper/swiper-bundle.css';
 import { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
