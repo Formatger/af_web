@@ -1,11 +1,24 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MediaIcon from '@/components/musician/mediaIcon';
 
 function AboutPage() {
 
 
     const [showIcons, setShowIcons] = useState(false);
+
+    const [changeButton, setChangeButton] = useState(false)
+    const [isPause, setIsPaused] = useState(false)
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            if (!isPause)
+                setChangeButton(prev => !prev);
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [isPause]);
+
 
     const socialMediaLinks = [
         {
@@ -90,14 +103,14 @@ function AboutPage() {
                         alt='Descripción de la imagen'
                         layout='fill'
                         objectFit='cover'
-                        objectPosition='right center'
+                        objectPosition='right top'
                         priority
                     />
                 </div>
                 <div
                     className={`container-icon ${showIcons ? 'visible' : ''}`}
-                    onMouseEnter={() => setShowIcons(true)}
-                    onMouseLeave={() => setShowIcons(false)}
+                    onMouseEnter={() => {setShowIcons(true),setIsPaused(true)}}
+                    onMouseLeave={() => {setShowIcons(false),setIsPaused(false)}}
                 >
                     {socialMediaLinks.map((link, index) => (
                         <MediaIcon key={index} socialMediaLink={link} />
@@ -108,7 +121,7 @@ function AboutPage() {
             </div>
             <div className="description-container">
                 <h1>ABOUT ME</h1>
-                <p >
+                <p>
                     Born on February 21, 1995 in Barcelona, this musician began his journey in the world of music at the age of 12,
                     learning to play the guitar self-taught.<br /><br />
 
@@ -124,23 +137,12 @@ function AboutPage() {
                     Currently, he is recording his first album with the rock band Black Amber. Additionally, he performs live with different projects,
                     notably in the tribute to Fito y Fitipaldis, teaches guitar, and participates in studio sessions both online and in-person.
                 </p>
-                <div className="getlinks-container"
-                    onMouseEnter={() => setShowIcons(true)}
-                    onMouseLeave={() => setShowIcons(false)}
+                <div
+                    className={changeButton ? "getlinks-container-active" : "getlinks-container"}
+                    onMouseEnter={() => { setShowIcons(true); setIsPaused(true); }}
+                    onMouseLeave={() => { setShowIcons(false); setIsPaused(false); }}
                 >
-                    <span className="text">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            className="bi bi-send-fill"
-                            viewBox="0 0 16 16"
-                        >
-                            <path
-                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"
-                            ></path>
-                        </svg>
-                    </span>
+                    <div className='text-button'>LINK BUTTON  is working?</div>
                 </div>
             </div >
         </div >

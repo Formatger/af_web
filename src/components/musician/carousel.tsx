@@ -13,8 +13,8 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         <Swiper
             navigation
             modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
-            spaceBetween={20}
-            slidesPerView={3}
+            spaceBetween={0}
+            slidesPerView={2}
             loop={true}
             autoplay={{
                 delay: 3000,
@@ -23,10 +23,9 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             centeredSlides={true}
             effect="coverflow"
             coverflowEffect={{
-                depth: 250,
-                rotate: 0,
-                stretch: 20,
-                modifier: 3.5,
+                depth: 300,
+                rotate: -0,
+                stretch: 200,
                 slideShadows: false,
             }}
         >
@@ -37,6 +36,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
                         alt=''
                         layout="fill"
                         objectFit="contain" // Ajustar la imagen para cubrir el contenedor
+                        className='carousel.image'
 
                     />
                 </SwiperSlide>

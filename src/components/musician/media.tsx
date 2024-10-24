@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "./carousel";
+import CarouselVideo from "./carousel-video";
 // import VideoSlider from "./Video_slider";
 import { useEffect, useState } from "react";
 
@@ -92,8 +93,12 @@ function Media() {
     return (
         <div className='Media' >
             <h1 className="h1-white">MEDIA</h1>
-            <div className="carousel-container">
+            <div className="carousel-fotos">
                 <Carousel images={images} />
+            </div>
+            <h1 className="h1-white">VIDEO</h1>
+            <div className="carousel-video">
+                <CarouselVideo videos={videos} />
             </div>
             <div>
                 {/* <VideoSlider videos={videos} /> */}

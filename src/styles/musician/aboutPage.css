@@ -143,16 +143,23 @@
 
 /* This is an example, feel free to delete this code */
 .getlinks-container {
-    background: rgb(3, 169, 244);
+    font-size: 1em;
+    background: rgb(0, 200, 83);
+    /* Verde más oscuro */
     background: linear-gradient(138deg,
-            rgba(3, 169, 244, 1) 15%,
-            rgba(63, 180, 233, 1) 65%);
+            rgba(0, 200, 83, 1) 15%,
+            rgba(76, 175, 80, 1) 65%);
     position: relative;
     cursor: pointer;
     font-size: 17px;
     padding: 0.7em 0.7em;
     border-radius: 50px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: all 500ms;
+    text-align: center;
+    font-family: sans-serif;
+    box-shadow: 2px -2px 15px 2px rgba(0, 0, 0, 0.3),
+        -2px 2px 15px 2px rgba(0, 0, 0, 0.3);
 }
 
 .getlinks-container:hover {
@@ -165,13 +172,33 @@
     align-items: center;
     justify-content: center;
     fill: #fff;
-    transition: all 0.2s;
+    transition: all 1000ms ease;
+    font-size: inh;
 }
 
 .getlinks-container:hover .text {
     fill: rgb(3, 169, 244);
     transition: all 0.6s;
 }
+
+.getlinks-container-active {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 3px 3 black;
+    background: rgb(139, 255, 0);
+    background: radial-gradient(rgb(139, 255, 0) 40%,
+    rgba(0, 200, 83, 1) 100%
+            );
+    position: relative;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 0.7em 0.7em;
+    border-radius: 50px;
+    transition: all 500ms;
+    text-align: center;
+    box-shadow: 3px -3px 30px 5px rgba(0, 0, 0, 0.3),
+        -3px 3px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
 
 
 
