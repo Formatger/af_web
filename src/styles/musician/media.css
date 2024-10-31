@@ -5,8 +5,9 @@
     flex-direction: column;
     align-items: center;
     padding: 50px 100px 50px 100px;
-    background-color: yellow;
+    background-color: rgb(0, 0, 0);
     gap: 90px;
+    position: relative;
 
 }
 
@@ -19,7 +20,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Urbanist-Bold';
     font-size: 3vw;
     letter-spacing: 0.3rem;
@@ -34,12 +35,6 @@
     width: 100%;
 }
 
-.carousel-video {
-    position: relative;
-    width: 100%;
-}
-
-
 .carousel-fotos .swiper {
     background-color: aqua;
     width: 100%;
@@ -48,48 +43,62 @@
     align-items: center;
     display: flex;
 }
-
 .carousel-fotos .swiper-wrapper {
     display: relative;
     width: 100%;
 }
-
 .carousel-fotos .swiper-slide {
     display: flexbox;
     width: 100%;
     align-items: center;
     justify-content: center;
-}
-
-.carousel-video .swiper{
-    position: relative;
-    height: 700px;
-    
-}
-
-.carousel-video .swiper-scrollbar{
-    background-color: blue;
-    position: absolute;
-    top:0px;
+    filter: drop-shadow(3px 3px 3px black);
 
 }
 
-.carousel-video .swiper-scrollbar-drag{
-    background-color: blue;
-    position: relative;
-}
 
 
 
-/* IMAGE SLIDER*/
-
-.fotos-container {
-    width: 100vw;
-    height: auto;
-    overflow: hidden;
-    padding-bottom: 2vw;
-}
-
-.carousel-container {
+.carousel-video {
+    width: 100%;
     height: auto;
 }
+.carousel-video .swiper {
+    display: flex;
+    position: relative;
+    overflow: visible;
+    height: auto;
+}
+
+.carousel-video .swiper-wrapper{
+    width:500px;
+}
+
+.carousel-video .swiper-slide {
+    /* overflow: visible; */
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(3px 3px 3px black);
+}
+
+
+/* 
+.carousel-video .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-video .swiper-bullet {
+    margin: 0px;
+
+}
+
+.carousel-video .swiper-pagination-container {
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+} */

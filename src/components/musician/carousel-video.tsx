@@ -9,36 +9,37 @@ interface CarouselVideoProps {
 const CarouselVideo: React.FC<CarouselVideoProps> = ({ videos }) => {
     return (
         <Swiper
-            modules={[Scrollbar, Navigation, Autoplay, EffectCoverflow]}
-            navigation={true}
-            scrollbar={{
-                draggable:true,
-                dragClass:"swiper-scrollbar-drag",
-                dragSize:300,
-                
+            modules={[Scrollbar, Pagination, Navigation, Autoplay, EffectCoverflow]}
+            pagination={{
+                el: ".swiper-pagination",
+                clickable: true,
             }}
+            loop={true}
+            loopAdditionalSlides={2}
+            centeredSlides={true}
             slidesPerView={3}
-            spaceBetween={0}
+            spaceBetween={-600}
             autoplay={{
                 delay: 3000,
             }}
             effect="coverflow"
             coverflowEffect={{
                 slideShadows: false,
-                depth: 300,
+                depth: 400,
                 rotate: -10,
-
-            }
-            }
+            }}
         >
             {videos.map((video, index) => (
                 <SwiperSlide key={index}>
-                    <Youtube
-                        videoId={video}
-
+                    <Youtube 
+                    videoId={video}
                     />
                 </SwiperSlide>
             ))}
+            <div className='swiper-pagination-container'>
+                <div className="swiper-pagination">
+                </div>
+            </div>
         </Swiper>
     );
 };
