@@ -8,39 +8,44 @@ interface CarouselVideoProps {
 
 const CarouselVideo: React.FC<CarouselVideoProps> = ({ videos }) => {
     return (
-        <div>
-            <Swiper
-                modules={[Scrollbar, Pagination, Navigation, Autoplay, EffectCoverflow]}
-                pagination={{
-                    el: ".video-swiper-pagination",
-                    clickable: true,
-                }}
-                loop={true}
-                loopAdditionalSlides={2}
-                centeredSlides={true}
-                slidesPerView={3}
-                spaceBetween={-600}
-                autoplay={{
-                    delay: 3000,
-                }}
-                // effect="coverflow"
-                // coverflowEffect={{
-                //     slideShadows: false,
-                //     depth: 400,
-                //     rotate: -10,
-                // }}
-            >
-                {videos.map((video, index) => (
-                    <SwiperSlide key={index}>
-                        <Youtube
-                            videoId={video}
-                        />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-            <div className="video-swiper-pagination">
-            </div>
-        </div>
+        <div className='carousel-video-container'>
+            <div >
+                <Swiper
+                    modules={[Scrollbar, Pagination, Navigation, Autoplay, EffectCoverflow]}
+                    pagination={{
+                        el: ".video-swiper-pagination",
+                        clickable: true,
+                    }}
+                    loop={true}
+                    loopAdditionalSlides={4}
+                    centeredSlides={true}
+                    slidesPerView={2}
+                    spaceBetween={-400}
+                    autoplay={{
+                        delay: 3000,
+                    }}
+                    speed={2000}
+                    effect="coverflow"
+                    coverflowEffect={{
+                        slideShadows: false,
+                        depth: 370,
+                        rotate: -10,
+                    }}
+                >
+                    <div className='carousel-video .swiper-slide'>
+                        {videos.map((video, index) => (
+                            <SwiperSlide key={index}>
+                                <Youtube
+                                    videoId={video}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </div >
+                </Swiper>
+                <div className='video-swiper-pagination'>
+                </div>
+            </div >
+        </div >
     );
 };
 
