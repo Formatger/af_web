@@ -27,7 +27,7 @@ function MusicianPage() {
                 <ServicePage />
             </div>
             <div>
-                <Media />
+                {/* <Media /> */}
             </div>
         </div>
     );

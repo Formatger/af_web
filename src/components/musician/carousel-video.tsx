@@ -1,12 +1,16 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectCoverflow, Scrollbar } from 'swiper/modules';
 import Youtube from "react-youtube"
+import { useState } from 'react';
 
 interface CarouselVideoProps {
     videos: string[]; // Array de URLs de imágenes
 }
 
 const CarouselVideo: React.FC<CarouselVideoProps> = ({ videos }) => {
+
+    const [isStop, setIsStop] = useState<boolean>(false)
+
     return (
         <div className='carousel-video-container'>
             <div >
@@ -21,9 +25,7 @@ const CarouselVideo: React.FC<CarouselVideoProps> = ({ videos }) => {
                     centeredSlides={true}
                     slidesPerView={2}
                     spaceBetween={-400}
-                    autoplay={{
-                        delay: 3000,
-                    }}
+                    autoplay={isStop ? false : { delay: 3000 }}
                     speed={2000}
                     effect="coverflow"
                     coverflowEffect={{
@@ -37,6 +39,8 @@ const CarouselVideo: React.FC<CarouselVideoProps> = ({ videos }) => {
                             <SwiperSlide key={index}>
                                 <Youtube
                                     videoId={video}
+                                    onPlay={() =>  setIsStop(true) }ss
+                                    onEnd={() =>  setIsStop(false) }
                                 />
                             </SwiperSlide>
                         ))}

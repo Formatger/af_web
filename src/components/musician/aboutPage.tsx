@@ -99,18 +99,21 @@ function AboutPage() {
             <div className="container-image">
                 <div className="description-image">
                     <Image
-                        src='/musician/imagen-bio.jpg'
-                        alt='Descripción de la imagen'
-                        layout='fill'
-                        objectFit='cover'
-                        objectPosition='right top'
+                        src="/musician/imagen-bio.jpg"
+                        alt="Descripción de la imagen"
+                        fill
+                        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                        style={{
+                            objectFit: 'cover',
+                            objectPosition: 'right top'
+                        }}
                         priority
                     />
                 </div>
                 <div
                     className={`container-icon ${showIcons ? 'visible' : ''}`}
-                    onMouseEnter={() => {setShowIcons(true),setIsPaused(true)}}
-                    onMouseLeave={() => {setShowIcons(false),setIsPaused(false)}}
+                    onMouseEnter={() => { setShowIcons(true), setIsPaused(true) }}
+                    onMouseLeave={() => { setShowIcons(false), setIsPaused(false) }}
                 >
                     {socialMediaLinks.map((link, index) => (
                         <MediaIcon key={index} socialMediaLink={link} />

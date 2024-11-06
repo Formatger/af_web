@@ -1,5 +1,5 @@
 .loading {
-    background-image: url('/public/fotos/fotos-movil/img-video.png');
+    background-image: url('/musician/img-video.png');
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -59,7 +59,7 @@
 }
 
 
-@media (max-width:768px) {
+/* @media (max-width:768px) {
 
     .video-background {
         display: flex;
@@ -77,4 +77,4 @@
         z-index: -1;
     }
 
-}
+} */

@@ -23,22 +23,24 @@ function Media() {
     let serviceImages;
 
     const images = [
-        '/musician/1.jpg', '/musician/2.jpg', '/musician/3.jpg', '/musician/4.jpg',
-        '/musician/5.jpg', '/musician/6.jpg', '/musician/7.jpg', '/musician/8.jpg',
-        '/musician/9.jpg', '/musician/10.jpg', '/musician/11.jpg', '/musician/12.jpg',
-        '/musician/13.jpg', '/musician/14.jpg', '/musician/15.jpg', '/musician/16.jpg',
-        '/musician/17.jpg', '/musician/18.jpg', '/musician/19.jpg', '/musician/20.jpg',
-        '/musician/21.jpg', '/musician/22.jpg', '/musician/23.jpg', '/musician/24.jpg',
-        '/musician/25.jpg', '/musician/26.jpg', '/musician/27.jpg', '/musician/28.jpg',
-        '/musician/29.jpg', '/musician/30.jpg', '/musician/31.jpg', '/musician/32.jpg',
-        '/musician/33.jpg', '/musician/34.jpg', '/musician/35.jpg', '/musician/36.jpg',
-        '/musician/37.jpg', '/musician/38.jpg', '/musician/39.jpg', '/musician/41.jpg',
-        '/musician/42.jpg', '/musician/43.jpg', '/musician/44.jpg', '/musician/45.jpg',
-        '/musician/46.jpg', '/musician/47.jpg', '/musician/48.jpg', '/musician/49.jpg',
-        '/musician/50.jpg', '/musician/51.jpg', '/musician/52.jpg', '/musician/53.jpg',
-        '/musician/54.jpg', '/musician/55.jpg', '/musician/56.jpg', '/musician/57.jpg',
-        '/musician/58.jpg', '/musician/59.jpg', '/musician/60.jpg', '/musician/61.jpg',
-        '/musician/62.jpg', '/musician/63.jpg']
+
+        // '/musician/1.jpg', '/musician/2.jpg', '/musician/3.jpg', '/musician/4.jpg',
+        // '/musician/5.jpg', '/musician/6.jpg', '/musician/7.jpg', '/musician/8.jpg',
+        // '/musician/9.jpg', '/musician/10.jpg', '/musician/11.jpg', '/musician/12.jpg',
+        // '/musician/13.jpg', '/musician/14.jpg', '/musician/15.jpg', '/musician/16.jpg',
+        // '/musician/17.jpg', '/musician/18.jpg', '/musician/19.jpg', '/musician/20.jpg',
+        // '/musician/21.jpg', '/musician/22.jpg', '/musician/23.jpg', '/musician/24.jpg',
+        // '/musician/25.jpg', '/musician/26.jpg', '/musician/27.jpg', '/musician/28.jpg',
+        // '/musician/29.jpg', '/musician/30.jpg', '/musician/31.jpg', '/musician/32.jpg',
+        // '/musician/33.jpg', '/musician/34.jpg', '/musician/35.jpg', '/musician/36.jpg',
+        // '/musician/37.jpg', '/musician/38.jpg', '/musician/39.jpg', '/musician/41.jpg',
+        // '/musician/42.jpg', '/musician/43.jpg', '/musician/44.jpg', '/musician/45.jpg',
+        // '/musician/46.jpg', '/musician/47.jpg', '/musician/48.jpg', '/musician/49.jpg',
+        // '/musician/50.jpg', '/musician/51.jpg', '/musician/52.jpg', '/musician/53.jpg',
+        // '/musician/54.jpg', '/musician/55.jpg', '/musician/56.jpg', '/musician/57.jpg',
+        // '/musician/58.jpg', '/musician/59.jpg', '/musician/60.jpg', '/musician/61.jpg',
+        // '/musician/62.jpg', '/musician/63.jpg'
+    ]
 
     // if (isMobile) {
     //     images = [
