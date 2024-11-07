@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 interface ServiceCardProps {
     image: string;
-    // title: string,
-    // list: string[];
+    title: string,
+    list: string[];
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ image, 
-    // title, list
+    title, list
 }) => {
 
     return (
@@ -25,14 +25,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image,
                     priority
                 />
             </div>
-            {/* <div className="card-text">
+            <div className="card-text">
                 <h2>{title}</h2>
-                <ul className="card-list">
+                {/* <ul className="card-list">
                     {list.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
-                </ul>
-            </div> */}
+                </ul> */}
+            </div> 
         </div >
     );
 };

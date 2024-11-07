@@ -71,9 +71,9 @@
     height:649px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 55vw;
     padding: 34px;
-    gap: 34px;
     background-color: white;
     border-radius: 45px 0 0 45px;
     z-index: 1;
