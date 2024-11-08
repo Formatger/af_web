@@ -43,13 +43,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, list, swiperRef
                 </div>
 
             </div>
-            {getInfo &&
+            <div className={`card-list-container ${getInfo ? 'show' : 'hide'}`}>
                 <ul className="card-list">
                     {list.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
                 </ul>
-            }
+            </div>
         </div>
     );
 };

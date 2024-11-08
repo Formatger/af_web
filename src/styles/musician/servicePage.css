@@ -14,6 +14,8 @@
     height: auto;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: row;
 }
 
 .container-card .swiper {
@@ -81,7 +83,34 @@
     background-color: rgb(236, 198, 198);
 }
 
+
+.card-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1500ms all;
+    scale: 0;
+}
+
+.card-list-container.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 750ms;
+    scale: 1;
+}
+
+.card-list-container.hide {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+
 .card-list {
+    transition-delay: 2000ms;
+    transition: 2000ms;
     width: 500px;
     height: auto;
     display: flex;
